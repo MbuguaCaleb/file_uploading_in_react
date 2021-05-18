@@ -8,6 +8,7 @@ app.use(fileUpload());
 app.use(cors());
 // Upload Endpoint
 app.post('/upload', (req, res) => {
+  console.log(req.files);
   if (req.files === null) {
     return res.status(400).json({ msg: 'No file uploaded' });
   }
@@ -20,7 +21,10 @@ app.post('/upload', (req, res) => {
       return res.status(500).send(err);
     }
 
-    res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
+    res.json({
+      fileName: file.name,
+      filePath: `/uploads/${file.name}`,
+    });
   });
 });
 
