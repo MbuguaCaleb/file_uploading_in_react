@@ -80,6 +80,16 @@ helps us not keep on specifying it from the front end side when making the reque
 
 ```
 
+**Javascript Form Data**
+
+```
+The FormData object lets you compile a set of key/value pairs to send using XMLHttpRequest.
+
+It is primarily intended for use in sending form data, but can be used independently from forms in order to
+transmit keyed data.
+
+
+```
 
 **Dev Dependencies**
 
